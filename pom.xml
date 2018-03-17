@@ -10,8 +10,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
-		<!-- Test Dependencies -->
+		<!-- Test Versions -->
 		<junit.version>4.12</junit.version>
+		<!-- Plugin Versions -->
+		<javadoc.version>3.0.0</javadoc.version>
 	</properties>
 	<dependencies>
 		<!-- Test Dependencies -->
@@ -22,4 +24,16 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${javadoc.version}</version>
+				<configuration>
+					<reportOutputDirectory>docs</reportOutputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
